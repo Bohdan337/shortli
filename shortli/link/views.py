@@ -4,8 +4,9 @@ from .models import ShortenedURL
 import random
 import string
 from .forms import URLForm
+from django.contrib.auth.decorators import login_required
 
-
+@login_required
 def redirect_to_original(request, short_code):
     url_entry = get_object_or_404(ShortenedURL, short_code=short_code)
     
@@ -15,6 +16,7 @@ def redirect_to_original(request, short_code):
 
     return redirect(url_entry.original_url)
 
+@login_required
 def create_short_url(request):
     if request.method == 'POST':
         form = URLForm(request.POST)
@@ -24,7 +26,8 @@ def create_short_url(request):
             
             short_url = ShortenedURL.objects.create(
                 short_code=short_code,
-                original_url=original_url
+                original_url=original_url,
+                author=request.user
             )
             return render(request, 'shortened_url_success.html', {'short_code': short_code})
     else:

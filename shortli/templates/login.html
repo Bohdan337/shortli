@@ -6,14 +6,10 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Вітаємо, {{ user.username }}</h1>
-    <a href="{% url 'logout' %}">Вийти</a>
-
-    <p>create</p>
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit">Скоротити URL</button>
+        <button type="submit">Увійти</button>
     </form>
 </body>
 </html>
