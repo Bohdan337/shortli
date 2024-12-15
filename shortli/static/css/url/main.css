@@ -39,6 +39,7 @@ body {
     background-color: #f3bfbf9c;
     padding: 0.75rem;
     border-radius: 0.413rem;
+    text-decoration: none;
 }
 
 .navbar-btn-log {
@@ -168,4 +169,69 @@ body {
 .url-success-link:hover {
     text-decoration: underline;
     color: #EA5F76; 
+}
+
+.my-url {
+    box-shadow: 0px 0px 21px 1px rgba(0,0,0,0.2);
+    position: relative;
+    margin-top: 4rem;
+    border-radius: 3rem;
+    background-color: rgb(253, 248, 249);
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.my-url-content {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.my-url-title {
+    font-family: 'Franklin Gothic';
+    display: block;
+    font-size: 1.7rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.my-url-description {
+    background-color: rgb(255, 246, 251);
+    padding: 1rem;
+    margin-top: 0.5rem;
+}
+
+.my-url-description-p-first {
+    color: #EA5F76;
+    font-size: 1.2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.my-url-description-p {
+    max-width: 30.5rem; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;  
+    font-family: 'Franklin Gothic';
+}
+
+.my-url-description-a {  
+    color: #000000;
+    font-family: cursive;
+
+}
+
+.my-url-description-a:hover {
+    color: #EA5F76;
+}
+
+.my-url-description-none {
+    font-family: 'Franklin Gothic';
+    color: #000000;
+    margin-left: auto;
+    margin-right: auto;
 }

@@ -35,3 +35,9 @@ def create_short_url(request):
         form = URLForm()
 
     return render(request, 'url/main.html', {'form': form, 'short_code': short_code})
+
+
+@login_required
+def users_url(request):
+    user_urls = ShortenedURL.objects.filter(author=request.user)
+    return render(request, 'url/users_url.html', {'user_urls': user_urls})

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/url/main.css' %}">
+    <title>ShotLi</title>
+</head>
+<body>
+    <div class="main">
+        <div class="main-navbar">
+            <div class="navbar-content">
+                <div class="navbar-logo">
+                    <img src="{% static 'image/logo.jpg' %}" class='navbar-logo-img' alt="">
+                    <a class="navbar-logo-p" href="{% url 'main' %}">URL ShorTening</a>
+                </div>
+
+                <div class="navbar-button">
+                    {% if user.is_authenticated %}
+                        <a class="navbar-btn-log" href="{% url 'logout' %}">Logout</a>
+                        <a class="navbar-btn-your-url" href="{% url 'my_url' %}">Your URL</a>
+                    {% else %}  
+                        <a class="navbar-btn-log" href="{% url 'login' %}">Login</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <div class="my-url">
+            <div class="my-url-content">
+                <h2 class="my-url-title">Your Shortened URLs</h2>
+                {% if user_urls %}
+                    <ul>
+                        {% for url in user_urls %}
+                            <li class="my-url-description">
+                                <p class='my-url-description-p-first'>Shortened URL: <a class="my-url-description-a" href="/url/{{ url.short_code }}">/url/{{ url.short_code }}</a></p>
+                                <p class='my-url-description-p'>Original URL: <a class="my-url-description-a" href="{{ url.original_url }}" target="_blank">{{ url.original_url }}</a></p>
+                                <p class='my-url-description-p'>Created At: <span style='color: ##EA5F76;'>{{ url.created_at }}</span></p>
+                                <p class='my-url-description-p'>Click Count: {{ url.click_count }}</p>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <p class='my-url-description-none'>You haven't created any shortened URLs yet.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

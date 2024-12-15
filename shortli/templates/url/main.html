@@ -13,13 +13,13 @@
             <div class="navbar-content">
                 <div class="navbar-logo">
                     <img src="{% static 'image/logo.jpg' %}" class='navbar-logo-img' alt="">
-                    <p class="navbar-logo-p">URL ShorTening</p>
+                    <a class="navbar-logo-p" href="{% url 'main' %}">URL ShorTening</a>
                 </div>
 
                 <div class="navbar-button">
                     {% if user.is_authenticated %}
                         <a class="navbar-btn-log" href="{% url 'logout' %}">Logout</a>
-                        <a class="navbar-btn-your-url">Your URL</a>
+                        <a class="navbar-btn-your-url" href="{% url 'my_url' %}">Your URL</a>
                     {% else %}  
                         <a class="navbar-btn-log" href="{% url 'login' %}">Login</a>
                     {% endif %}
