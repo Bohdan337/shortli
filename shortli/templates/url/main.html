@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/url/main.css' %}">
+    <title>ShotLi</title>
+</head>
+<body>
+    <div class="main">
+        <div class="main-navbar">
+            <div class="navbar-content">
+                <div class="navbar-logo">
+                    <img src="{% static 'image/logo.jpg' %}" class='navbar-logo-img' alt="">
+                    <p class="navbar-logo-p">URL ShorTening</p>
+                </div>
+
+                <div class="navbar-button">
+                    {% if user.is_authenticated %}
+                        <a class="navbar-btn-log" href="{% url 'logout' %}">Logout</a>
+                        <a class="navbar-btn-your-url">Your URL</a>
+                    {% else %}  
+                        <a class="navbar-btn-log" href="{% url 'login' %}">Login</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="main-content-component">
+                <h1 class='main-content-component-title'>here you can create your short url</h1>
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="form-url-content">
+                        {{ form.original_url }}
+                        <button type="submit">Short It</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="url-success">
+
+        </div>
+    </div>
+</body>
+</html>

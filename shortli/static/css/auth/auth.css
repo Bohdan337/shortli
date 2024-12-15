@@ -1,0 +1,100 @@
+body {
+    background: url('../../image/login_back.png');
+    height: 80vh;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.block {
+    background-color: rgb(255, 255, 255);
+    min-width: 10%;
+    margin: auto;
+    border-radius: 7px;
+    box-shadow: 0px 0px 21px 1px rgba(0,0,0,0.2);
+}
+
+.login {
+    width: 21.875rem;
+    height: 21.875rem;
+}
+
+.signup {
+    width: 26.875rem;
+    height: 27.875rem;
+}
+
+.block-content {
+    padding-top: 1rem;
+    width: 85%;
+    height: 90%;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.block-title {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.block-p {
+    font-family: 'Franklin Gothic';
+    font-weight: 200;
+    font-size: 12px;
+    margin-top: -1rem;
+    padding-left: 0.2rem;
+    color: #B9B9B9;
+}
+
+form {
+    margin-top: 2.5rem;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="email"],
+form button {
+    display: block;
+    width: 100%;
+    margin-bottom: 1.138rem;
+    padding: 0.625rem;
+    font-size: 16px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #F6F6F6;
+}
+
+form input[type="text"]:focus,
+form input[type="password"]:focus,
+form input[type="email"]:focus {
+    outline: none;
+    border-color: #D57878;
+    box-shadow: 0 0 5px #D57878;
+}
+
+form button {
+    background-color: #EA5F76;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+form button:hover {
+    background-color: #EA5F76;
+}
+
+form input::placeholder {
+    color: #b2b2b2; 
+    font-weight: bold;
+    font-size: 12px;
+    font-family: 'Franklin Gothic';
+}
+
+.block-to-page {
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Franklin Gothic';
+}

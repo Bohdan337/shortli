@@ -10,11 +10,11 @@ def sign_up(request):
             user = form.save()
             print(user)
             login_view(request, user)
-            return redirect('create')
+            return redirect('main')
     else:
         form = SignUpForm()
     
-    return render(request, 'signup.html', {'form': form})
+    return render(request, 'auth/signup.html', {'form': form})
 
 
 def login(request):
@@ -26,14 +26,14 @@ def login(request):
             user = authenticate(request, username=username, password=password)
             if user is not None:
                 login_view(request, user)  
-                return redirect('create')  
+                return redirect('main')  
             else:
                 form.add_error(None, "Неправильний логін або пароль")
     else:
         form = LoginForm()
-    return render(request, 'login.html', {'form': form}) 
+    return render(request, 'auth/login.html', {'form': form}) 
 
 
 def logout_view(request):
     logout(request)
-    return redirect('login')
+    return redirect('main')

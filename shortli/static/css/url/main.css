@@ -1,0 +1,134 @@
+body {
+    background-image: url('../../image/login_back.png');
+    margin: 0.05rem;
+    padding: 0;
+}
+
+.main-navbar {
+    background-color: rgb(253, 248, 249);
+    min-height: 5rem;
+    width: 100%;
+}
+
+.navbar-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 79%;
+    height: 6rem;
+    margin: auto;
+}
+
+.navbar-logo {
+    display: flex;
+    gap: 1.3rem;
+    align-items: center;
+}
+
+.navbar-logo-img {
+    height: 2.9rem;
+    border-radius: 0.613rem;
+}
+
+.navbar-logo-p {
+    font-family: 'Franklin Gothic';
+    font-size: 1.1rem;
+    color: rgb(255, 255, 255);
+    background-color: #f3bfbf9c;
+    padding: 0.75rem;
+    border-radius: 0.413rem;
+}
+
+.navbar-btn-log {
+    background-color: #EA5F76;
+    color: white;
+    border: none;
+    font-size: 0.9rem;
+    padding: 0.5rem 2rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar-btn-log:hover {
+    background-color: rgb(253, 248, 249);
+    color: black;
+    border: 1px solid black;
+}
+
+.navbar-btn-your-url {
+    background-color: rgb(253, 248, 249);
+    color: black;
+    border: 1px solid black;
+    font-size: 0.9rem;
+    padding: 0.44rem 2rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar-btn-your-url:hover {
+    background-color: #EA5F76;
+    color: white;
+    border: none;
+}
+
+.main-content-component {
+    display: flex;
+    justify-content: center; 
+    height: 43vh;
+    align-items: center; 
+    flex-direction: column;
+}
+
+
+.form-url-content {
+    position: relative;
+    width: 100%; 
+    max-width: 100rem; 
+    margin: 0 auto; 
+}
+
+.main-content-component-title {
+    font-family: 'Franklin Gothic';
+    display: block;
+}
+
+.form-url-content input {
+    display: block;
+    width: 100%; 
+    padding: 0.625rem 6.25rem 0.625rem 0.938rem; 
+    border: 2px solid #EA8F8F; 
+    background-color: #f7e5e5;
+    border-radius: 0.55rem;
+    min-height: 3.5rem;
+    min-width: 35rem;
+    font-size: 16px;
+    font-family: cursive;
+    color: white;
+    box-sizing: border-box;
+}
+
+.form-url-content button {
+    position: absolute;
+    right: 0.625rem; 
+    top: 50%;
+    transform: translateY(-50%); 
+    padding: 0.613rem 1.35rem;
+    background-color: #f7e5e5; 
+    color: black;
+    border: 2px solid black;
+    border-radius: 0.55rem;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.form-url-content button:hover {
+    background-color: #D57878;
+}
+
+
