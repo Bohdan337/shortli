@@ -38,9 +38,14 @@
                 </form>
             </div>
         </div>
-        <div class="url-success">
-
-        </div>
+        
+        {% if short_code %}
+            <div id="url-success" class="url-success">
+                <p class="url-success-title">Short URL Created:</p>
+                <a href="/url/{{ short_code }}" class="url-success-link" target="_blank">/url/{{ short_code }}</a>
+            </div>
+        {% endif %}
+        
     </div>
 </body>
 </html>

@@ -8,6 +8,7 @@ body {
     background-color: rgb(253, 248, 249);
     min-height: 5rem;
     width: 100%;
+    box-shadow: 0px 0px 21px 1px rgba(0,0,0,0.2);
 }
 
 .navbar-content {
@@ -110,6 +111,7 @@ body {
     font-family: cursive;
     color: white;
     box-sizing: border-box;
+    box-shadow: 0px 0px 21px 1px rgba(0,0,0,0.2);
 }
 
 .form-url-content button {
@@ -131,4 +133,39 @@ body {
     background-color: #D57878;
 }
 
+.url-success {
+    background-color: rgb(253, 248, 249);
+    border-radius: 1rem;
+    width: 15%;
+    display: flex;
+    justify-content: center; 
+    height: 17vh;
+    align-items: center; 
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 0px 21px 1px rgba(0,0,0,0.2);
+}
 
+.url-success-title {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic';
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+
+.url-success-link {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: rgb(255, 255, 255);
+    background-color: #f3bfbf9c;
+    padding: 0.6rem;
+    border-radius: 0.413rem;
+}
+
+.url-success-link:hover {
+    text-decoration: underline;
+    color: #EA5F76; 
+}

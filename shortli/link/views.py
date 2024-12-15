@@ -18,22 +18,20 @@ def redirect_to_original(request, short_code):
 
 # @login_required
 def create_short_url(request):
+    short_code = None 
     if request.method == 'POST':
         form = URLForm(request.POST)
         if form.is_valid():
             short_code = ''.join(random.choices(string.ascii_letters + string.digits, k=6))
             original_url = form.cleaned_data['original_url']
             
-            short_url = ShortenedURL.objects.create(
+            ShortenedURL.objects.create(
                 short_code=short_code,
                 original_url=original_url,
                 author=request.user if request.user.is_authenticated else None
             )
-            return render(request, 'url/shortened_url_success.html', {'short_code': short_code})
+            form = URLForm()
     else:
         form = URLForm()
-    return render(request, 'url/main.html', {'form': form})
 
-
-def welcome(request):
-    return render(request, 'url/welcome.html')
+    return render(request, 'url/main.html', {'form': form, 'short_code': short_code})
